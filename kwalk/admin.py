@@ -44,6 +44,6 @@ class FolderAdmin(admin.ModelAdmin):
 
 @admin.register(Card)
 class CardAdmin(admin.ModelAdmin):
-    list_display = ("id", "name")
-    list_filter = ("name", "desc")
-    search_fields = ("name", )
+    list_display = ("id", "name", "desc", "rarity")
+    list_filter = ("name", "rarity")
+    search_fields = ("name", "rarity")

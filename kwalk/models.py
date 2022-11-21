@@ -24,7 +24,7 @@ class Player(models.Model):
 
 class Folder(models.Model):
     # Attributes
-    nb_cards = models.fields.IntegerField(default=0)
+    nb_cards = models.fields.PositiveIntegerField(default=0)
 
     # Foreign key
     parent = models.ForeignKey("Player", null=False, on_delete=models.CASCADE)
@@ -38,6 +38,7 @@ class Card(models.Model):
     # Attributes
     name = models.fields.CharField(max_length=20, default="name_by_default")
     desc = models.fields.CharField(max_length=20, default="desc_by_default")
+    rarity = models.fields.CharField(max_length=20, default="rarity_by_default")
 
     # Foreign key
     parent = models.ForeignKey("Folder", null=False, on_delete=models.CASCADE)
