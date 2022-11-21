@@ -1,0 +1,20 @@
+<!--
+Creator: Flokk___
+Date: 18/11/2022
+Version: V1.0
+
+Purpose:
+-->
+
+<html>
+    <head><title>KWalk</title></head>
+    <body>
+        <h1>Bonjour!</h1>
+        <p>Roll cards:</p>
+            <ul>
+                {% for card in cards %}
+                <li>card name: {{card.name}}, card desc: {{card.desc}}</li>
+                {% endfor %}
+            </ul>
+    </body>
+</html>
