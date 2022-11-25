@@ -22,7 +22,7 @@ class Player(models.Model):
         verbose_name_plural = "Players"
 
 
-class Folder(models.Model):
+class Inventory(models.Model):
     # Attributes
     nb_cards = models.fields.PositiveIntegerField(default=0)
 
@@ -30,8 +30,8 @@ class Folder(models.Model):
     parent = models.ForeignKey("Player", null=False, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = "Folder"
-        verbose_name_plural = "Folders"
+        verbose_name = "Inventory"
+        verbose_name_plural = "Inventories"
 
 
 class Card(models.Model):
@@ -41,7 +41,7 @@ class Card(models.Model):
     rarity = models.fields.CharField(max_length=20, default="rarity_by_default")
 
     # Foreign key
-    parent = models.ForeignKey("Folder", null=False, on_delete=models.CASCADE)
+    parent = models.ForeignKey("Inventory", null=False, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Card"

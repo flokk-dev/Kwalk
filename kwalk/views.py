@@ -10,14 +10,29 @@ Purpose:
 from django.http import HttpResponse
 from django.shortcuts import render
 
+# IMPORT: rest
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+
 # IMPORT: project
-from kwalk.models import Card
+from kwalk.models import Player, Inventory, Card
+from kwalk.serializers import PlayerSerializer, InventorySerializer, CardSerializer
 
 
 # Create your views here.
-def add_cards(request):
-    return render(request, "listings/roll.html", {"cards": Card.objects.all()})
+class PlayerViewSet(viewsets.ModelViewSet):
+    queryset = Player.objects.all()
+    serializer_class = PlayerSerializer
+    permission_classes = (IsAuthenticated, )
 
 
-def display_cards(request):
-    return render(request, "listings/cards.html", {"cards": Card.objects.all()})
+class InventoryViewSet(viewsets.ModelViewSet):
+    queryset = Inventory.objects.all()
+    serializer_class = InventorySerializer
+    permission_classes = (IsAuthenticated, )
+
+
+class CardViewSet(viewsets.ModelViewSet):
+    queryset = Card.objects.all()
+    serializer_class = CardSerializer
+    permission_classes = (IsAuthenticated, )

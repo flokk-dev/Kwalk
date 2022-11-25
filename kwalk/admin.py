@@ -10,12 +10,12 @@ Purpose:
 from django.contrib import admin
 
 # IMPORT: project
-from .models import Player, Folder, Card
+from .models import Player, Inventory, Card
 
 
 # Register your inlines here.
-class FolderInLine(admin.TabularInline):
-    model = Folder
+class InventoryInLine(admin.TabularInline):
+    model = Inventory
     extra = 0
 
 
@@ -31,11 +31,11 @@ class PlayerAdmin(admin.ModelAdmin):
     list_filter = ("pseudo", "date")
     search_fields = ("pseudo", )
 
-    inlines = (FolderInLine, )
+    inlines = (InventoryInLine, )
 
 
-@admin.register(Folder)
-class FolderAdmin(admin.ModelAdmin):
+@admin.register(Inventory)
+class InventoryAdmin(admin.ModelAdmin):
     list_display = ("id", "nb_cards")
     list_filter = ("nb_cards", )
 
