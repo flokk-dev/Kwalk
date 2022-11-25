@@ -25,6 +25,9 @@ class PlayerViewSet(viewsets.ModelViewSet):
     serializer_class = PlayerSerializer
     permission_classes = (IsAuthenticated, )
 
+    filterset_fields = ["date", ]
+    search_fields = ["pseudo", ]
+
 
 class InventoryViewSet(viewsets.ModelViewSet):
     queryset = Inventory.objects.all()

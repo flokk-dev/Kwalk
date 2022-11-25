@@ -10,9 +10,6 @@ Purpose:
 import os
 import sys
 
-# IMPORT: back-end
-import django
-
 
 def main():
     """ Run administrative tasks. """

@@ -13,8 +13,11 @@ from django.db import models
 class Player(models.Model):
     # Attributes
     pseudo = models.fields.CharField(max_length=20, default="pseudo_by_default")
+    password = models.fields.CharField(max_length=20, default="password_by_default")
+
     name = models.fields.CharField(max_length=50, default="name_by_default")
     surname = models.fields.CharField(max_length=50, default="surname_by_default")
+
     date = models.DateField()
 
     class Meta:
