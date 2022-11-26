@@ -14,8 +14,8 @@ from django.urls import path, include
 from rest_framework import routers
 
 # IMPORT: project
-from kwalk.urls import router as player_router
-from user_management.urls import router as user_management_router
+from api_kwalk.urls import router as player_router
+from api_auth.urls import router as user_management_router
 
 
 # ROUTER

@@ -10,7 +10,7 @@ Purpose:
 from django.test import TestCase
 
 # IMPORT: project
-from kwalk.models import Player, Inventory, Card
+from api_kwalk.models import Player, Inventory, Card
 
 
 # Create your tests here.

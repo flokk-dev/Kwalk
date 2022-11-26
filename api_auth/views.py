@@ -16,7 +16,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
 # IMPORT: project
-from user_management.serializers import UserSerializer
+from api_auth.serializers import UserSerializer
 
 
 # Create your views here.

@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     "corsheaders",
     "django_filters",
-    "kwalk"
+    "api_kwalk"
 ]
 
 REST_FRAMEWORK = {
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "kwalk_backend.urls"
+ROOT_URLCONF = "backend.urls"
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "kwalk_backend.wsgi.application"
+WSGI_APPLICATION = "backend.wsgi.application"
 
 
 # Database

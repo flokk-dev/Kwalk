@@ -7,8 +7,10 @@ Purpose:
 """
 
 # IMPORT: django
-from rest_framework import serializers
 from django.contrib.auth.models import User
+
+# IMPORT: rest
+from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
