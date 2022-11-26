@@ -10,7 +10,7 @@ Purpose:
 from rest_framework import serializers
 
 # IMPORT: project
-from api_kwalk.models import Player, Inventory, Card
+from .models import Player, Inventory, Card
 
 
 class PlayerSerializer(serializers.ModelSerializer):

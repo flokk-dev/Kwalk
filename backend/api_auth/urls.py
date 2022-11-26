@@ -10,7 +10,7 @@ Purpose:
 from rest_framework import routers
 
 # IMPORT: project
-from api_auth.views import MeViewSet
+from .views import MeViewSet
 
 
 # ROUTER

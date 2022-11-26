@@ -15,8 +15,8 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
 # IMPORT: project
-from api_kwalk.models import Player, Inventory, Card
-from api_kwalk.serializers import PlayerSerializer, InventorySerializer, CardSerializer
+from .models import Player, Inventory, Card
+from .serializers import PlayerSerializer, InventorySerializer, CardSerializer
 
 
 # Create your views here.

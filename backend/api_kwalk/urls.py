@@ -10,7 +10,7 @@ Purpose:
 from rest_framework import routers
 
 # IMPORT: project
-from api_kwalk.views import PlayerViewSet, InventoryViewSet, CardViewSet
+from .views import PlayerViewSet, InventoryViewSet, CardViewSet
 
 
 # ROUTER

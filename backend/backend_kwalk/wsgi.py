@@ -12,6 +12,6 @@ import os
 # IMPORT: django
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "KWalk.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend_kwalk.settings")
 
 application = get_wsgi_application()
