@@ -19,19 +19,16 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async (e ) => {
         e.preventDefault()
-        let response = fetch("http://127.0.0.1:8000/api/token/", {
+        let response = await fetch("http://127.0.0.1:8000/api/token/", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body:JSON.stringify({"username": e.target.username.value, "password": e.target.password.value})
+            body: JSON.stringify({"username": e.target.username.value, "password": e.target.password.value})
         })
 
-        let data = response.json
-        console.log(response.status)
-        if (response.status === 200){
-
-        } else {
-            alert("Something went wrong!")
-        }
+        let data = await response.json()
+        console.log("response", response.status)
+        if (response.status === 200){ setAuthTokens() }
+        else {alert("Something went wrong!")}
 
     }
 
