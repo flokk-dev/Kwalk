@@ -10,11 +10,11 @@ Purpose:
 import React from "react";
 
 
-const Header = () => {
+const HomePage = () => {
     return (
         <div>
-            <h1> Our header </h1>
+            <h1> Home </h1>
         </div>
     )
 }
-export default Header
+export default HomePage

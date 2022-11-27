@@ -10,11 +10,11 @@ Purpose:
 import React from "react";
 
 
-const InventoryPage = () => {
+const MarketplacePage = () => {
     return (
         <div>
-            <h1> Our inventory </h1>
+            <p> Our inventory </p>
         </div>
     )
 }
-export default InventoryPage;
+export default MarketplacePage;
